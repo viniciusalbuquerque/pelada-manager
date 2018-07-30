@@ -1,7 +1,5 @@
-
+const controllers = require('./controllers/controllers')
 module.exports = (app) => {
-	app.get('/peladas', (req, res) => {
-		res.send('list peladas')
-	})
-
+	app.get('/peladas', controllers.peladaController.getPeladas)
+	app.put('/peladas/add', controllers.peladaController.newPelada)
 }
